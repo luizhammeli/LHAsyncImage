@@ -19,8 +19,8 @@ final class LocalImageFeatcherTests: XCTestCase {
     func test_fetch_shouldCompleteWithSuccess() async {
         // Arange
         let fakeURL = URL(string: "https//test.com")!
-        let fakeCache = NSCache<NSString, NSData>()
         let fakeData = "test-image".data(using: .utf8)!
+        let fakeCache = NSCache<NSString, NSData>()
         let sut = LocalImageFeatcher(cache: fakeCache)
 
         // Act
