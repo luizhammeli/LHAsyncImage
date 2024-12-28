@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "14B268A9-B384-4D4A-B2E8-C5D94BC448F8",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "threadSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "LHAsyncImageTests",
+        "name" : "LHAsyncImageTests"
+      }
+    }
+  ],
+  "version" : 1
+}
