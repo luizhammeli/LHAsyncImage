@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ImageResult {
+enum ImageResult: Equatable {
     case cached(Data)
     case remote(Data)
 }

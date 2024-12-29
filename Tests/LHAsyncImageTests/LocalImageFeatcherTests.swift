@@ -1,3 +1,10 @@
+//
+//  LocalImageFeatcherTests.swift
+//  LHAsyncImage
+//
+//  Created by Luiz Diniz Hammerli on 08/12/24.
+//
+
 import XCTest
 @testable import LHAsyncImage
 
