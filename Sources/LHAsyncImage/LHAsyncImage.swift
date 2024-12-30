@@ -66,25 +66,3 @@ struct CustomAsyncImage<P: View>: View {
     .scaledToFit()
     .frame(width: 220, height: 220)
 }
-
-@MainActor
-final class ImageViewModel: ObservableObject {
-    nonisolated(unsafe) private let imageFeatcher: ImageManageable
-    @Published var image: UIImage?
-
-    init(imageFeatcher: ImageManageable = ImageManager()) {
-        self.imageFeatcher = imageFeatcher
-    }
-
-    func fetchImage(with url: URL) async {
-        if let imageData = try? await imageFeatcher.fetch(url: url) {
-            if case .cached(let data) = imageData {
-                image = UIImage(data: data)
-            } else if case .remote(let data) = imageData {
-                withAnimation {
-                    image = UIImage(data: data)
-                }
-            }
-        }
-    }
-}

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class LocalImageFeatcher: ImageFeatchable {
+actor LocalImageFeatcher: ImageFeatchable {
     nonisolated(unsafe) static let defaultCache: NSCache<NSString, NSData> = .init()
     private let cache: NSCache<NSString, NSData>
 
